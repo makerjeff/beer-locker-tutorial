@@ -1,0 +1,10 @@
+{
+  "name": "beer-locker-tutorial",
+  "version": "0.0.1",
+  "description":"Tutorial on building restful APIs",
+  "private":true,
+  "dependencies": {
+    "colors":"latest",
+    "express":"latest"
+  }
+}
