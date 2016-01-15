@@ -5,6 +5,8 @@
   "private":true,
   "dependencies": {
     "colors":"latest",
-    "express":"latest"
+    "express":"latest",
+    "mongoose":"latest",
+    "body-parser":"latest"
   }
 }
