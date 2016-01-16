@@ -28,7 +28,7 @@ var router = express.Router();  // better than standard Express router?
 // == ROUTES ==
 // initial dummy route for testing
 //http://localhost:<port>/api
-router.get('/', function(request, response){
+router.get('/', function(request, response) {
     response.json({ message: 'You are running dangerously low on beer!'});
 });
 
