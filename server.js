@@ -24,6 +24,15 @@ var port = process.argv[2] || 8000;
 //create router
 var router = express.Router();  // better than standard Express router?
 
+// == MIDDLEWARE ==
+//register all our routes with /api
+app.use('/api', router);
+
+//use body parser
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 
 // == ROUTES ==
 // initial dummy route for testing
@@ -46,7 +55,7 @@ beersRoute.post(function(request, response){
     beer.quantity = request.body.quantity;
 
     //save the beer and check for errors
-    beer.save = function(err){cl
+    beer.save = function(err){
         if(err) {
             response.send(err);
         } else {
@@ -55,15 +64,6 @@ beersRoute.post(function(request, response){
     }
 
 });
-
-// == MIDDLEWARE ==
-//register all our routes with /api
-app.use('/api', router);
-
-//use body parser
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
 
 // == START THE SERVER ==
 app.listen(port);
